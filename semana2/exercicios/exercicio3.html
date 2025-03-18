@@ -1,9 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #222;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        color: #ddd;
+      }
+
+      .container {
+        background-color: #333;
+        padding: 30px;
+        margin: 50px auto;
+        width: 50%;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        border: 2px solid #444;
+      }
+
+      h2 {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      button {
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        transform: scale(1.1);
+      }
+    </style>
+    <title>Verificador de Palíndromos</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Verificador de Palíndromos</h1>
+      <input
+        type="text"
+        id="inputText"
+        placeholder="Digite uma palavra ou uma frase"
+      />
+      <button onclick="verificarPalindromo()">Verificar</button>
+    </div>
+
+    <script>
+      function verificarPalindromo() {
+        let inputText = document.getElementById("inputText").value;
+        inputText = inputText.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+
+        let reverseText = inputText.split("").reverse().join("");
+        if (inputText === reverseText) {
+          alert("É um palíndromo!");
+        } else {
+          alert("Não é um palíndromo.");
+        }
+      }
+    </script>
+  </body>
 </html>
