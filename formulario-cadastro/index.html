@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <form action="">
+      <form class="form" action="post" onsubmit="submitForm(this)">
         <label for="nome">Nome:</label>
         <input
           type="text"
@@ -46,20 +46,34 @@
         />
 
         <div class="radio-container">
-          <input id="inputTeacher" type="radio" name="options" checked />
+          <input
+            id="inputTeacher"
+            type="radio"
+            name="role"
+            value="Professor"
+            onchange="updateForm()"
+          />
           <label id="labelTeacher" for="teacher">Professor</label>
 
-          <input id="inputStudant" type="radio" name="options" />
+          <input
+            id="inputStudant"
+            type="radio"
+            name="role"
+            value="Aluno"
+            onchange="updateForm()"
+          />
           <label id="labelStudant" for="studant">Aluno</label>
         </div>
 
-        <label for="area">Área:</label>
-        <input
-          type="text"
-          id="role"
-          name="role"
-          placeholder="Digite sua área de atuação"
-        />
+        <div class="area-container">
+          <label for="area">Área:</label>
+          <input
+            type="text"
+            id="role"
+            name="role"
+            placeholder="Digite sua área de atuação"
+          />
+        </div>
 
         <label for="matriculation">Matrícula</label>
         <input
@@ -69,17 +83,29 @@
           placeholder="Digite sua matrícula"
         />
 
-        <label for="lattes">Lattes:</label>
-        <input
-          type="text"
-          id="lattes"
-          name="lattes"
-          placeholder="Digite aqui o endereço do seu Lattes"
-        />
+        <div class="lattes-container">
+          <label for="lattes">Lattes:</label>
+          <input
+            type="text"
+            id="lattes"
+            name="lattes"
+            placeholder="Digite aqui o endereço do seu Lattes"
+          />
+        </div>
+
+        <div class="curso-container">
+          <label for="class" id="class">Curso:</label>
+          <input
+            type="text"
+            name="class"
+            id="class-input"
+            placeholder="Digite seu curso"
+          />
+        </div>
 
         <div class="button-container">
           <button type="submit">Enviar</button>
-          <button type="reset">Redefinir</button>
+          <button id="reset-form" type="button">Redefinir</button>
         </div>
       </form>
     </div>

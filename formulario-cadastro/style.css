@@ -28,7 +28,7 @@ form {
 }
 
 label {
-  margin-top: 15px;
+  margin-top: 20px;
   font-weight: bold;
   color: #333;
 }
@@ -47,8 +47,14 @@ input[type="date"] {
   margin-right: 20px;
 }
 
+.area-container,
+.lattes-container,
+.curso-container {
+  margin-top: 20px;
+}
+
 .radio-container {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .button-container {
@@ -72,10 +78,10 @@ button:hover {
   background-color: #0056b3;
 }
 
-button[type="reset"] {
+#reset-form {
   background-color: #dc3545;
 }
 
-button[type="reset"]:hover {
+#reset-form:hover {
   background-color: #a71d2a;
 }
