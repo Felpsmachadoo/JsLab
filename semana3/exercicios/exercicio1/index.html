@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cadastro de Carros</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Cadastro de Carro</h2>
+      <form id="carForm">
+        <div class="input-group">
+          <label for="marca">Marca:</label>
+          <input type="text" id="marca" required />
+        </div>
+        <div class="input-group">
+          <label for="modelo">Modelo:</label>
+          <input type="text" id="modelo" required />
+        </div>
+        <div class="input-group">
+          <label for="ano">Ano:</label>
+          <input type="number" id="ano" required />
+        </div>
+        <div class="input-group">
+          <label for="cor">Cor:</label>
+          <input type="text" id="cor" required />
+        </div>
+        <div class="input-group">
+          <label for="km">Kilometragem (km):</label>
+          <input type="number" id="km" required />
+        </div>
+        <div class="input-group">
+          <label for="valor_fipe">Valor Fipe:</label>
+          <input type="number" id="valor_fipe" required />
+        </div>
+        <button type="submit">Cadastrar</button>
+      </form>
+
+      <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
